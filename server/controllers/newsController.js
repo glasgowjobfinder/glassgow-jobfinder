@@ -6,13 +6,10 @@ class ControllerNews{
         let newsUrl = `http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${API_KEY}`
         axios.get(newsUrl)
             .then(function (response) {
-                // handle success
                 res.status(200).json(response.data.articles)
             })
             .catch(function (error) {
-                // handle error
-                //console.log(err)
-                res.status(500).json({msg: error.message})
+                next(error)
             })
     }
 

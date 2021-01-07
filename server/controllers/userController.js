@@ -12,14 +12,15 @@ class ControllerUser {
             };
 
             data = await User.create(data);
+            
 
             res.status(201).json(data);
         } catch (err) {
             if (err.errors) {
-                res.status(400).json(err.errors);
+                next(err)
             }
 
-            res.status(500).json('Server Error');
+            next(err)
         }
     }
 
@@ -34,14 +35,13 @@ class ControllerUser {
                     });
                     res.status(200).json({ acces_token: token });
                 } else {
-                    res.status(400).json('Wrong email or password');
+                    next({name: "wrong Email/Password"})
                 }
             } else {
-                res.status(400).json('Wrong email or password');
+                next({name: "wrong Email/Password"})
             }
         } catch (err) {
-            //console.log(err);
-            res.status(500).json('Server Error');
+            next(err)
         }
     }
 }
