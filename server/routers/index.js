@@ -1,4 +1,7 @@
 const router = require('express').Router()
+const job = require('./job.js')
+const news = require('./news.js')
+const trivia = require('./trivia.js')
 
 router.use('/', user)
 //router.use(authenticate)
