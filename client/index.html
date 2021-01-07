@@ -1,128 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <meta name="google-signin-client_id" content="826289420449-olucnrvj1ejq6vucbihd8ovep9qpnrs9.apps.googleusercontent.com">
-    <title>JobsTive</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta name="google-signin-client_id"
+    content="826289420449-olucnrvj1ejq6vucbihd8ovep9qpnrs9.apps.googleusercontent.com">
+  <title>JobsTive</title>
 </head>
+
 <body>
-    <!-- NavBar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#" id="apps-nave">
-            <img src="https://i.insider.com/4e8d177ceab8eac01d000012?width=600&format=jpeg&auto=webp" width="30" height="30" alt="JobsTive">
-            JobsTive
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#" id="login-nave">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" id="jobs-nave">Jobs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" id="news-nave">News</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" id="register-nave">Register</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#" id="logout-nave">Logout</a>
-              </li>
-          </ul>
-        </div>
-      </nav>
+  <!-- NavBar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#" id="apps-nave">
+      <img src="https://i.insider.com/4e8d177ceab8eac01d000012?width=600&format=jpeg&auto=webp" width="30" height="30"
+        alt="JobsTive">
+      JobsTive
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="login-nave">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="jobs-nave">Jobs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="news-nave">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="register-nave">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="logout-nave">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-      <!-- app-detail -->
-      <section id="apps-home">
-        <div class="container">
-            <div id="home">
-                  <div class="image">
-
-                  </div>
-                  <div class="detailApps"></div>
-            </div>
-        </div>
-      </section>
-
-
-    <!-- Login-Form -->
-    <section id="login-page">
+  <!-- app-detail -->
+  <section id="apps-home">
     <div class="container">
-        <form>
-           <div class="form-group">
-             <label for="email-login">Email address</label>
-             <input type="email" class="form-control" id="email-login" aria-describedby="emailHelp placeholder="Enter email">
-             <small id="emailHelp" class="form-text text-muted">We'll never share your emai with anyone else.</small>
-           </div>
-           <div class="form-group">
-             <label for="password-login">Password</label>
-             <input type="password" class="form-control" id="password-login" placeholder="Password">
-           </div>
-           <button type="submit" class="btn btn-primary" id="login-btn">Login</button>
-           <button type="submit" class="btn btn-primary" id="showRegister">I Don't Have a Account</button>
-         </form>
-         <br>
-         <div class="g-signin2" data-onsuccess="onSignIn"></div>
-       </div>
-    </section>
+      <div id="home">
+        <div class="image">
 
-       <!-- Register-form -->
-       <section id="register-page">
-           <div class="container">
-               <form>
-                   <div class="form-group">
-                       <label for="email-reg">Email address</label>
-                       <input type="email" class="form-control" id="email-reg" aria-describedby="emailHelp" placeholder="Enter email">
-                       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                    </div>
-                    <div class="form-group">
-               <label for="full-name">Full Name</label>
-               <input type="text" class="form-control" id="full-name" placeholder="Name">
+        </div>
+        <div class="detailApps"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Login-Form -->
+  <section id="login-page"
+    style="background-image: url('https://images.unsplash.com/photo-1555947289-0d851755094e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=632&q=80'); background-size: cover; height: 100vh;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4" style="margin-top: 70px;">
+          <form>
+            <div class="form-group">
+              <label for="email-login">Email address</label>
+              <input type="email" class="form-control" id="email-login" aria-describedby="emailHelp placeholder=" Enter
+                email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your emai with anyone else.</small>
             </div>
             <div class="form-group">
-             <label for="password-reg">Password</label>
-             <input type="password" class="form-control" id="password-reg" placeholder="Password">
+              <label for="password-login">Password</label>
+              <input type="password" class="form-control" id="password-login" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary" id="login-btn">Login</button>
+            <button type="submit" class="btn btn-primary" id="showRegister">I Don't Have a Account</button>
+          </form>
+          <br>
+          <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        </div>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </section>
+
+  <!-- Register-form -->
+  <section id="register-page"
+    style="background-image: url('https://images.unsplash.com/photo-1555947289-0d851755094e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=632&q=80'); background-size: cover; height: 100vh;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4" style="margin-top: 70px;">
+          <form>
+            <div class="form-group">
+              <label for="email-reg">Email address</label>
+              <input type="email" class="form-control" id="email-reg" aria-describedby="emailHelp"
+                placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="full-name">Full Name</label>
+              <input type="text" class="form-control" id="full-name" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label for="password-reg">Password</label>
+              <input type="password" class="form-control" id="password-reg" placeholder="Password">
             </div>
             <button type="submit" class="btn btn-primary" id="register-btn">Register</button>
             <button type="submit" class="btn btn-primary" id="showLogin">I have a Account !</button>
-        </form>
-        <br>
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
-    </div>
-    </section>
-
-       <!-- Jobs-List -->
-       <section id="jobs-list">
-            <div class="container">
-                <div id="trivia-quiz">
-                </div>
-                <div id="show-jobslist">
-                </div>
-
-            </div>
-       </section>
-
-       <!-- news -->
-       <section id="news-list">
-        <div class="container">
-            <div id="show-newslist">
-            </div>
+          </form>
+          <br>
+          <div class="g-signin2" data-onsuccess="onSignIn"></div>
         </div>
-       </section>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </section>
 
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-     <script src="https://code.jquery.comjquery-3.5.1.js"integrity="sha256-QWo7LDvxbWT2tbbQ9753yJnYU3WhH/C8ycbRAkjPDc="crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"     crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"   integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"   crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script src="./script.js"></script>
+  <!-- Jobs-List -->
+  <section id="jobs-list" style="background: url('https://images.unsplash.com/photo-1594734415578-00fc9540929b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80') center center no-repeat; background-size: cover; ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div id="trivia-quiz">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div id="show-jobslist" >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- news -->
+  <section id="news-list">
+    <div class="container">
+      <div id="show-newslist">
+      </div>
+    </div>
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.comjquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ9753yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>
