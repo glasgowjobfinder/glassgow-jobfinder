@@ -40,7 +40,7 @@ class ControllerUser {
                 res.status(400).json('Wrong email or password');
             }
         } catch (err) {
-            console.log(err);
+            //console.log(err);
             res.status(500).json('Server Error');
         }
     }

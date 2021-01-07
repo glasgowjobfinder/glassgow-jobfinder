@@ -11,6 +11,7 @@ class ControllerNews{
             })
             .catch(function (error) {
                 // handle error
+                //console.log(err)
                 res.status(500).json({msg: error.message})
             })
     }
