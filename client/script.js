@@ -168,7 +168,7 @@ function randomTrivia(el) {
     let random = Math.floor(Math.random()*el.length)
     $('#trivia-quiz').empty()
     $('#trivia-quiz').append(`
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 18rem; margin-top:20px;">
         <div class="card-body">
           <h5 class="card-title">Trivia</h5>
           <p class="card-text">${el[random].question}</p>
@@ -209,7 +209,7 @@ function getJoblist () {
         $('#show-jobslist').empty()
         response.forEach(el => {
             $('#show-jobslist').append(`
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 120%; height:2%; margin-top:20px;">
             <img class="card-img-top" src="${el.company_logo}" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">${el.title}</h5>
@@ -264,7 +264,7 @@ function getNews() {
         $('#show-newslist').empty()
         response.forEach(el => {
             $('#show-newslist').append(`
-            <div class="card mb-3">
+            <div class="card mb-3" style="width:500px; margin:20px auto;">
             <img class="card-img-top" src="${el.urlToImage}" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">${el.title}</h5>
