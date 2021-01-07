@@ -1,4 +1,5 @@
 const router = require('express').Router()
+const user = require('./user.js');
 const job = require('./job.js')
 const news = require('./news.js')
 const trivia = require('./trivia.js')
