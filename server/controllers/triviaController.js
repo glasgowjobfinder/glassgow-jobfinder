@@ -1,6 +1,6 @@
 const axios = require("axios").default
 class ControllerTrivia {
-    static getTrivia (req, res) {
+    static getTrivia (req, res, next) {
         let trivia = 'https://opentdb.com/api.php?amount=20&category=18&type=boolean'
         axios.get(trivia)
         .then(response => {
@@ -8,7 +8,7 @@ class ControllerTrivia {
             res.status(200).json(data)
         })
         .catch(err => {
-            res.send(err)
+            next(err)
         })
     }
 }
