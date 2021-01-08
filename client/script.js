@@ -56,9 +56,10 @@ $('#login-btn').click((event) => {
     })
     .fail(err => {
         console.log(err.responseJSON)
+        let errMessage = err.responseJSON.message
         Swal.fire({
             title: 'Error!',
-            text: err.responseJSON,
+            text: errMessage.split('Validation error:').join('\n'),
             icon: 'error',
             confirmButtonText: 'Close'
           })
@@ -112,13 +113,13 @@ $('#register-btn').click((event) => {
         login()
     })
     .fail(err => {
-        console.log(err.responseJSON)
-        let errMessage = err.responseJSON.map((el) => {
-            return el.message
-        })
+        // console.log(err)
+        // console.log(err.responseJSON)
+        let errMessage = err.responseJSON.message
+        console.log(errMessage)
         Swal.fire({
             title: 'Error!',
-            text: errMessage.join(', '),
+            text: errMessage.split('Validation error:').join('\n'),
             icon: 'error',
             confirmButtonText: 'Close'
           })
@@ -132,16 +133,37 @@ $('#register-btn').click((event) => {
 
 $('#logout-nave').click((event) => {
     event.preventDefault()
-    localStorage.clear()
-    login()
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut()
+    .then(function () {
+        localStorage.clear()
+        console.log('User signed out.');
+        login()
+    })
+    .catch(err=>{
+        console.log(err, `ini error di google account`)
+    })
 })
 
+
 function onSignIn(googleUser) {
-    let profile = googleUser.getBasicProfile();
-    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-    console.log('Name: ' + profile.getName());
-    console.log('Image URL: ' + profile.getImageUrl());
-    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+    let id_token = googleUser.getAuthResponse().id_token
+    $.ajax({
+        method: 'POST',
+        url: `${server}loginGoogle`,
+        data:{
+            id_token
+        }
+    })
+    .done(response =>{
+        console.log(response)
+        localStorage.setItem('access_token', response.acces_token)
+        showJoblist()
+    })
+    .fail((xhr,status) =>{
+        console.log(status)
+    })
+    //console.log(id_token)
 }
 
 // CRUD
